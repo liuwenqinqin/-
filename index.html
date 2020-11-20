@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>117 首页</title>
+  <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="./index/index.css">
+</head>
+
+<body class="layui-layout-body">
+  <div class="layui-layout layui-layout-admin">
+    <!-- 头部区域 -->
+    <div class="layui-header">
+      <!-- 左侧：图片 -->
+      <div class="layui-logo">
+        <img src="./assets/images/logo.png" alt="">
+      </div>
+      <!-- 右侧：个人菜单 -->
+      <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item">
+          <a href="javascript:;" class="userinfo">
+            <span class="avatar">L</span>
+            <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 个人中心
+          </a>
+
+          <dl class="layui-nav-child">
+            <dd><a href="">基本资料</a></dd>
+            <dd><a href="">更换头像</a></dd>
+            <dd><a href="">重置密码</a></dd>
+          </dl>
+
+        </li>
+
+        <li class="layui-nav-item">
+          <a href="javascript:;" id="logout">
+            <i class="layui-icon layui-icon-logout"></i>退出
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+
+    <div class="layui-side layui-bg-black">
+      <div class="layui-side-scroll">
+        <!-- 左侧：顶部欢迎词 -->
+        <div class="userinfo">
+          <span class="avatar">L</span>
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 欢迎你
+          <span class="username">小可爱</span>
+        </div>
+
+        <!-- 左侧：导航区-->
+        <ul class="layui-nav layui-nav-tree" lay-filter="test" lay-shrink="all">
+          <!-- ***************************************************首页 -->
+          <li class="layui-nav-item layui-this">
+            <a href="./home/home.html" target="fm">
+              <i class="layui-icon layui-icon-home">首页</i>
+            </a>
+          </li>
+
+
+          <!-- ***************************************************文章管理 -->
+          <li class="layui-nav-item">
+
+            <a class="" href="javascript:;">
+              <i class="layui-icon layui-icon-form"></i>文章管理
+            </a>
+
+            <dl class="layui-nav-child">
+              <dd>
+                <a href="./article/category.html" target="fm">
+                  <i class="layui-icon layui-icon-app"></i>类别管理
+                </a>
+              </dd>
+
+
+              <dd>
+                <a href="./article/article.html" target="fm">
+                  <i class="layui-icon layui-icon-app"></i>文章列表
+                </a>
+              </dd>
+
+
+              <dd>
+                <a href="./article/publisher.html" target="fm">
+                  <i class="layui-icon layui-icon-app"></i>发表文章
+                </a>
+              </dd>
+            </dl>
+          </li>
+
+          <!-- *****************************************************个人中心 -->
+          <li class="layui-nav-item">
+
+
+            <a href="javascript:;">
+              <i class="layui-icon layui-icon-user"></i>个人中心
+            </a>
+
+
+            <dl class="layui-nav-child">
+
+              <dd>
+                <a href="./user_info/user_info.html" target="fm">
+                  <i class="layui-icon layui-icon-app"></i>基本资料
+                </a>
+              </dd>
+
+              <dd>
+                <a href="./user/repwd.html" target="fm">
+                  <i class="layui-icon layui-icon-app"></i> 重置密码
+                </a>
+              </dd>
+
+              <dd>
+                <a href="./user/avatar.html" target="fm">
+                  <i class="layui-icon layui-icon-app"></i>更换头像
+                </a>
+              </dd>
+            </dl>
+
+
+
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="layui-body">
+      <!-- 内容主体区域 -->
+      <!-- <div style="padding: 15px;">内容主体区域</div> -->
+      <iframe src="./home/home.html" name="fm" frameborder="0"></iframe>
+    </div>
+
+    <div class="layui-footer">
+      <!-- 底部固定区域 -->
+      <!-- ? layui.com - 底部固定区域 -->
+    </div>
+  </div>
+
+</body>
+<script src="./assets/lib/layui/layui.all.js"></script>
+<script src="./assets/lib/jquery.js"></script>
+<script src="./index/index.js"></script>
+
+</html>
