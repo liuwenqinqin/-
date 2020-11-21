@@ -27,6 +27,7 @@ form.verify({
 })
 
 // ----------------注册--------
+// 注册事件
 $('#register .layui-form').on("submit", function (e) {
     // 1.阻止默认行为
     e.preventDefault();
@@ -35,7 +36,7 @@ $('#register .layui-form').on("submit", function (e) {
     // 3.提交信息
     $.ajax({
         type: 'POST',
-        url: 'http://ajax.frontend.itheima.net/api/reguser',
+        url: '/api/reguser',
         data: data,
         success: function (res) {
             layer.msg(res.message);
@@ -62,7 +63,7 @@ $('#login form').on("submit", function (e) {
     // 3.提交信息
     $.ajax({
         type: 'POST',
-        url: 'http://ajax.frontend.itheima.net/api/login',
+        url: '/api/login',
         data: data,
         success: function (res) {
             layer.msg(res.message);

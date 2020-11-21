@@ -5,10 +5,8 @@ if(!localStorage.getItem("token")){
 
 // -------------请求个人信息-----
 $.ajax({
-    url:"http://ajax.frontend.itheima.net/my/userinfo",
-    headers:{
-        Authorization:localStorage.getItem("token"),
-    },
+    url:"/my/userinfo",
+    
     // 请求成功后调用
     success:function(res){
         // console.log(res);
@@ -34,21 +32,7 @@ $.ajax({
             }
         }
     },
-    // 请求失败后调用
-    fail:function(){},
-    // 完成后，不管成功还是失败，都会执行这个函数
-    complete:function(xhr){
-        // xhr:经过JQ封装后，xhr对象
-        // 原生xhr找到返回数据，xhr.responseText；
-        // xhr.responseJSON
-
-        if(xhr.responseJSON.status == 1 || xhr.responseJSON.message == "身份认证失败！"){
-            localStorage.removeItem("token");
-            location.href = "../login.html";
-        }
-
-        
-    }
+    
 })
 
 
