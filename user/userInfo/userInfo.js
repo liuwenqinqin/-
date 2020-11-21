@@ -1,21 +1,27 @@
 var form = layui.form;
 
-$.ajax({
-    url:"/my/userinfo",
-    success:function(res){
-        layer.msg(res.message);
-        console.log(res);
-        if(res.status == 0) {
-            // var data = res.data;
-            // $("input[name = 'username']").val(data.username);
-            // $("input[name = 'nickname']").val(data.nickname);
-            // $("input[name = 'email']").val(data.email);
-            // 快速赋值，layUI
-            form.val("user",res.data);
-        }
-    }
-})
+getinfo();
 
+function getinfo(){
+    $.ajax({
+        url:"/my/userinfo",
+        success:function(res){
+            // console.log(res);
+            layer.msg(res.message);
+            // console.log(res);
+            if(res.status == 0) {
+                // var data = res.data;
+                // $("input[name = 'username']").val(data.username);
+                // $("input[name = 'nickname']").val(data.nickname);
+                // $("input[name = 'email']").val(data.email);
+                // 快速赋值，layUI
+                form.val("user",res.data);
+                // console.log(res);
+            }
+        }
+    })
+    
+}
 
 // ---------------更新数据-----------
 // 1、初始化赋值id
@@ -39,4 +45,10 @@ $("form").on("submit", function(e){
             }
         }
     })
+})
+
+
+$(".my-reset").click(function(e){
+    e.preventDefault();
+    getinfo();
 })
