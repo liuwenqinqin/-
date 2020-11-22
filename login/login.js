@@ -1,10 +1,10 @@
 // -------------------登录和注册页面切换
 $("#goto-register").on("click", function () {
-    $("#login").hide();
+    // $("#login").hide();
     $("#register").show();
 })
 $("#goto-login").on("click", function () {
-    $("#login").show();
+    // $("#login").show();
     $("#register").hide();
 });
 
@@ -55,7 +55,7 @@ $('#register .layui-form').on("submit", function (e) {
 })
 
 // ----------------登录--------
-$('#login form').on("submit", function (e) {
+$('#login .layui-form').on("submit", function (e) {
     // 1.阻止默认行为
     e.preventDefault();
     // 2.收集账号、密码信息

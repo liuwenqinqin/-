@@ -37,8 +37,8 @@ $(".sure").click(function(){
         data:{avatar: base64},
         success:function(res){
             layer.msg(res.message);
-            if(res.status === 0){
-                window.parent.get();
+            if(res.status == 0){
+               window.parent.get();
             }
         }
     })

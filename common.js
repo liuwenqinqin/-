@@ -13,7 +13,7 @@ $.ajaxPrefilter(function (data) {
     // 配置请求头
     if (data.url.indexOf("/my/") != -1) {
         data.headers = {
-            Authorization:localStorage.getItem("token"),
+            "Authorization":localStorage.getItem("token"),
         } 
 
     // 验证token是否有效的回调

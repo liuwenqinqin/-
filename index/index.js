@@ -1,10 +1,10 @@
 // --------------设计的第一层意思
 if(!localStorage.getItem("token")){
-    location.href = '../login.html';
+    location.href = '/login.html';
 }
 
 // -------------请求个人信息-----
-get();
+window.get();
 
 function get() {
     $.ajax({
@@ -49,7 +49,7 @@ $("#logout").on("click", function(){
         title:"提示退出"
     }, function(index){
         localStorage.removeItem("token");
-        location.href = "../login.html";
+        location.href = "/login.html";
         layer.close(index);
     }
     )

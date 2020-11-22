@@ -1,6 +1,6 @@
 var form = layui.form;
 
-getinfo();
+
 
 function getinfo(){
     $.ajax({
@@ -23,6 +23,8 @@ function getinfo(){
     
 }
 
+
+getinfo();
 // ---------------更新数据-----------
 // 1、初始化赋值id
 // 2、收集不会收集disabled
