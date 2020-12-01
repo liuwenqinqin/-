@@ -18,8 +18,8 @@ function get() {
                 var name = res.data.nickname || res.data.username;
                 $(".username").text(name);
                 // 头像：如果有头像数据
-                if(res.data.uaer_pic){
-                    $(".layui-nav-img").show().prop("src", res.data.uaer_pic);
+                if(res.data.user_pic){
+                    $(".layui-nav-img").show().prop("src", res.data.user_pic);
                     $('.avatar').hide();
                 }
                 // 测试：没有头像数据的时候
